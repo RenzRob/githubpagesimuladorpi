@@ -13,7 +13,7 @@ function App() {
   const [puntos, setPuntos] = useState([]);
   const [puntosDentro, setPuntosDentro] = useState(0);
 
-  const [repetidor, setRepetidor] = useState(1);
+  const [repetidor, setRepetidor] = useState(0);
   const [cargando, setCargando] = useState(false);
 
   const tirarArroz = (numeroPuntos = 1000) => {
@@ -57,10 +57,8 @@ function App() {
       <label>
         Cuantas paquetes de arroz voy a tirar?:&nbsp; 
         <input
-          type="number"
-          min="1"
           value={repetidor}
-          onChange={e => setRepetidor(Math.max(1, Number(e.target.value)))}
+          onChange={e => setRepetidor(Math.max(0, Number(e.target.value)))}
           style={{ width: 60 }}
           disabled={cargando}
         />
