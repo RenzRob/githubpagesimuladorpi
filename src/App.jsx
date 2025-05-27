@@ -55,7 +55,7 @@ function App() {
       <h1>Estimador de π con Monte Carlo</h1>
       
       <label>
-        Cuantas paquetes de arroz voy a tirar?:&nbsp; 
+        Cuantas puñados de arroz voy a tirar?:&nbsp; 
         <input
           value={repetidor}
           onChange={e => setRepetidor(Math.max(0, Number(e.target.value)))}
